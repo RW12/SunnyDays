@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sunny Days</string>
+    <string name="error_generic_network">Network Error</string>
+    <string name="m_s">"%1$s m/s"</string>
+    <string name="deg_C">"%1$s C"</string>
+    <string name="degrees">"%1$s degrees"</string>
+</resources>

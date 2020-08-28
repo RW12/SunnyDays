@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="forecastCardElevation">8dp</dimen>
+    <dimen name="forecastCardCornerRadius">8dp</dimen>
+    <dimen name="forecastCardHeight">120dp</dimen>
+    <dimen name="forecastCardTextSize">12sp</dimen>
+    <dimen name="forecastCardIconHeightWidth">32dp</dimen>
+
+    <dimen name="itemDecoratorSize">8dp</dimen>
+</resources>

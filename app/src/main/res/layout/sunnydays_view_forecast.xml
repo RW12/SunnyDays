@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/forecastCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/forecastCardElevation"
+    app:cardCornerRadius="@dimen/forecastCardCornerRadius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/forecastContentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="@dimen/forecastCardHeight">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forecastDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/forecastCardTextSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/forecastWindSpeed"
+            tools:text="Date"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forecastWindSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/forecastCardTextSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/forecastDate"
+            app:layout_constraintEnd_toStartOf="@id/forecastIcon"
+            tools:text="Wind Speed"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forecastMaxTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/forecastCardTextSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/forecastIcon"
+            app:layout_constraintStart_toStartOf="@id/forecastIcon"
+            app:layout_constraintEnd_toEndOf="@id/forecastIcon"
+            tools:text="Max Temp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/forecastIcon"
+            android:layout_width="@dimen/forecastCardIconHeightWidth"
+            android:layout_height="@dimen/forecastCardIconHeightWidth"
+            app:layout_constraintTop_toBottomOf="@id/forecastMaxTemp"
+            app:layout_constraintBottom_toTopOf="@id/forecastMinTemp"
+            app:layout_constraintStart_toEndOf="@id/forecastWindSpeed"
+            app:layout_constraintEnd_toStartOf="@id/forecastWindDirection"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forecastMinTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/forecastCardTextSize"
+            app:layout_constraintTop_toBottomOf="@id/forecastIcon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/forecastIcon"
+            app:layout_constraintEnd_toEndOf="@id/forecastIcon"
+            tools:text="Min Temp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forecastWindDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/forecastCardTextSize"
+            app:layout_constraintTop_toTopOf="@id/forecastIcon"
+            app:layout_constraintBottom_toBottomOf="@id/forecastIcon"
+            app:layout_constraintStart_toEndOf="@id/forecastIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Wind Direction"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
